@@ -14,7 +14,7 @@
 //protected by a mutex or mutual exclusion lock. None of the routines in
 //in the monitor can be executed by a thread until that thread acquires the
 //lock. This allows one thread to be executed at a time. A semaphore is a
-//simpler contruct because it is a lock that protects a shared resource rather
+//simpler construct because it is a lock that protects a shared resource rather
 //than a set of routines. The application must acquire the lock before using
 //the shred resource that is protected by a semaphore.  When deciding which to
 //use, it depends on the application and the language being used. Normally a
@@ -101,7 +101,7 @@ void *Consumer(){
 
 		pthread_cond_wait(&Buffer_Not_Empty,&mVar);
 
-	}
+		}
 
 		printf("Consume : %d \n",BufferIndex--);
 		pthread_mutex_unlock(&mVar);
