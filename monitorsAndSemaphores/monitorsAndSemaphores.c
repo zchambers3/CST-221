@@ -6,7 +6,7 @@
 //Synchronization mechanisms are needed in a program to ensure that two 
 //or more concurrent processes or threads do not simultaneously execute in the
 //critical section. The reason that semaphores and monitors are needed is
-//because multi-threded applications must control how threads access shared
+//because multi-threaded applications must control how threads access shared
 //resources and ensure that threads work well together. If applications do
 //not control the threads, then it can result in corruption of data and other
 //problems. Monitors and semaphores are both use to accomplish thread
