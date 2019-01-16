@@ -14,6 +14,8 @@
 //implemented for each checkpoint but when the timeout occurs it would not
 //send it to the back of the line but rather that recourse that caused the
 //timeout.
+//gcc deadavoid.c -o deadavoid -lrt
+//./deadavoid
 
 #include <pthread.h>
 #include <sys/signal.h>
@@ -28,6 +30,7 @@
 
 void err_abort(int status, char* message) {
 	fprintf(stderr, " %s \n ", message);
+	exit(status);
 }
 
 void errno_abort(char* message) {
@@ -109,15 +112,4 @@ int main() {
 		err_abort(status, "Unlock mutex");
 
 	return 0;
-}
-
-if(fork() == 0) {
-	printf("\nI am in pipe\n");
-	execlp("/bin/ls","ls",NULL);
-	printf("\nStill in the pipe\n");
-}
-else {
-	fprintf(stderr, "Writing to pipe now\n");
-	write(status, buffer, BUFFER_SIZE);
-	fprintf(stderr, "Wrote to pipe!");
 }
