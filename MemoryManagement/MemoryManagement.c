@@ -1,3 +1,8 @@
+//Zack Chambers
+//CST 221
+//January 13, 2019
+//John Zupan
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
